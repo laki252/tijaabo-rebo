@@ -161,7 +161,7 @@ def convert_to_wav(input_file: str) -> str:
         "-y",
         "-i", input_file,
         "-ac", "1",
-        "-ar", "8000",
+        "-ar", "16000",
         "-vn",
         output_file
     ]
