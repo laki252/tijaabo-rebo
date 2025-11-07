@@ -6,3 +6,4 @@ requests
 aiohttp
 pocketsphinx
 python-dotenv
+pydub
