@@ -1,0 +1,8 @@
+Flask
+pyrogram
+tgcrypto
+SpeechRecognition
+requests
+aiohttp
+pocketsphinx
+python-dotenv
