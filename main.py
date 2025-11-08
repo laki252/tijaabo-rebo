@@ -155,7 +155,7 @@ async def download_media(message: Message) -> str:
 def convert_to_flac(input_file: str) -> str:
     if not FFMPEG_BINARY:
         raise RuntimeError("FFMPEG binary not found. Cannot process media.")
-    output_file = os.path.join(DOWNLOADS_DIR, f"{os.path.basename(input_file)}.flac")
+    output_file = os.path.join(DOWNLOADS_DIR, f"{os.path.basename(input_file)}.mp3")
     command = [
         FFMPEG_BINARY,
         "-y",
@@ -163,7 +163,7 @@ def convert_to_flac(input_file: str) -> str:
         "-ac", "1",
         "-ar", "16000",
         "-vn",
-        "-c:a", "flac",
+        "-c:a", "mp3",
         output_file
     ]
     try:
@@ -184,7 +184,7 @@ def transcribe_file(file_path: str, lang_code: str = "en") -> str:
     flac_path = None
     try:
         flac_path = convert_to_flac(file_path)
-        sound = AudioSegment.from_file(flac_path, format="flac")
+        sound = AudioSegment.from_file(flac_path, format="mp3")
         chunks = silence.split_on_silence(
             sound,
             min_silence_len=700,
@@ -202,7 +202,7 @@ def transcribe_file(file_path: str, lang_code: str = "en") -> str:
             length_ms = len(chunk)
             if length_ms <= max_chunk_ms:
                 chunk_index += 1
-                chunk_file = os.path.join(DOWNLOADS_DIR, f"{os.path.basename(flac_path)}_chunk{chunk_index}.flac")
+                chunk_file = os.path.join(DOWNLOADS_DIR, f"{os.path.basename(mp3_path)}_chunk{chunk_index}.mp3")
                 chunk.export(chunk_file, format="flac")
                 tmp_files.append(chunk_file)
             else:
@@ -216,8 +216,8 @@ def transcribe_file(file_path: str, lang_code: str = "en") -> str:
                     sub = chunk[start:end]
                     chunk_index += 1
                     part += 1
-                    chunk_file = os.path.join(DOWNLOADS_DIR, f"{os.path.basename(flac_path)}_chunk{chunk_index}.flac")
-                    sub.export(chunk_file, format="flac")
+                    chunk_file = os.path.join(DOWNLOADS_DIR, f"{os.path.basename(mp3_path)}_chunk{chunk_index}.mp3")
+                    sub.export(chunk_file, format="mp3")
                     tmp_files.append(chunk_file)
                     start += step
         for i, chunk_file in enumerate(tmp_files, 1):
@@ -247,8 +247,8 @@ def transcribe_file(file_path: str, lang_code: str = "en") -> str:
         logging.error(f"Transcription error: {e}")
         raise e
     finally:
-        if flac_path and os.path.exists(flac_path):
-            os.remove(flac_path)
+        if flac_path and os.path.exists(mp3_path):
+            os.remove(mp3_path)
 
 WELCOME_MESSAGE = """👋 **Salaam!**
 • Send me
