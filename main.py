@@ -437,7 +437,7 @@ async def handle_media(client, message: Message):
     except Exception:
         size = None
     if size is not None and size > MAX_UPLOAD_SIZE:
-        await message.reply_text(f"⚠️ File too large. Max allowed {MAX_UPLOAD_MB}MB.")
+        await message.reply_text(f"Just Send me a file less than {MAX_UPLOAD_MB}MB 😎")
         return
     lang = user_lang[uid]
     mode = user_mode.get(uid, "📄 Text File")
