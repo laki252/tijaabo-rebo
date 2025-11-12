@@ -7,3 +7,4 @@ aiohttp
 pocketsphinx
 python-dotenv
 pydub
+pyTelegramBotAPI
