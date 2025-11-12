@@ -20,7 +20,7 @@ def run_flask():
 
 API_ID = int(os.environ.get("API_ID", "29169428"))
 API_HASH = os.environ.get("API_HASH", "55742b16a85aac494c7944568b5507e5")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "7790991731:AAF4NHGm0BJCf08JTdBaUWKzwfs82_Y9Ecw")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "7188814271:AAFdGogN_HID7Cqs__TPccM8e9OmtcGK7Yw")
 REQUEST_TIMEOUT_GEMINI = int(os.environ.get("REQUEST_TIMEOUT_GEMINI", "300"))
 
 MAX_UPLOAD_MB = int(os.environ.get("MAX_UPLOAD_MB", "250"))
