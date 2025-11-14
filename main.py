@@ -580,8 +580,8 @@ def send_subscription_message(chat_id:int):
     except Exception:
         return
     try:
-        m = InlineKeyboardMarkup(); m.add(InlineKeyboardButton("Click here to join the group", url=f"https://t.me/{REQUIRED_CHANNEL.lstrip('@')}"))
-        bot.send_message(chat_id, "🔒 Access Locked You cannot use this bot until you join the group.", reply_markup=m)
+        m = InlineKeyboardMarkup(); m.add(InlineKeyboardButton("Click here to join the Channel", url=f"https://t.me/{REQUIRED_CHANNEL.lstrip('@')}"))
+        bot.send_message(chat_id, "🔒 Access Locked You cannot use this bot until you join the Channel.", reply_markup=m)
     except Exception:
         pass
 
