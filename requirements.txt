@@ -8,3 +8,11 @@ pocketsphinx
 python-dotenv
 pydub
 pyTelegramBotAPI
+Flask
+requests
+pyTelegramBotAPI
+pymongo
+SpeechRecognition
+gunicorn
+ffmpeg-python
+edge_tts
