@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 TOKEN = "8281896922:AAHgwpFIXFme7NHAIKzt0gQGGQgAst2wjiE"
 WEBHOOK_URL = "https://tijaabo-rebo.onrender.com"
-REQUIRED_CHANNEL = "@laaaaaaaaalaaaaaa"
+REQUIRED_CHANNEL = "laaaaaaaaalaaaaaa"
 
 DB_USER = "lakicalinuur"
 DB_PASSWORD = "DjReFoWZGbwjry8K"
