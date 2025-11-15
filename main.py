@@ -1134,7 +1134,7 @@ async def synth_and_send_tts(chat_id: int, user_id: str, text: str, reply_to_mes
     "/start - Change the voice actor\n"
     "/rate - Change voice speed\n"
     "/pitch - Change voice pitch\n\n"
-    "Download now⬇️"
+    "Save to your phone 💗"
         )
 
         with open(filename, "rb") as f:
