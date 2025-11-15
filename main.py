@@ -848,7 +848,7 @@ def start_handler(message):
     markup = make_language_selection_keyboard()
     bot.send_message(
         message.chat.id,
-        "👋 Welcome! Choose Multilingual or select a language from the options below. 👇",
+        "Choose Multilingual or a language:",
         reply_markup=markup,
         parse_mode="Markdown"
     )
@@ -863,7 +863,7 @@ def help_handler(message):
     user_tts_mode[user_id] = None
     user_pitch_input_mode[user_id] = None
     user_rate_input_mode[user_id] = None
-    help_text = "help? Contact: @boyso20"
+    help_text = "Not available ❌"
     bot.send_message(message.chat.id, help_text, parse_mode="Markdown")
 
 @bot.message_handler(commands=['privacy'])
@@ -948,7 +948,7 @@ def on_tts_multilingual_select(call):
     bot.edit_message_text(
         chat_id=chat_id,
         message_id=call.message.message_id,
-        text="Here are the best multilingual voices! They can speak many languages, often better than the single-language voices.",
+        text="Okay! Now choose a specific *voice* from Multilingual.👇",
         reply_markup=make_tts_multilingual_keyboard()
     )
     bot.answer_callback_query(call.id)
@@ -968,7 +968,7 @@ def on_tts_language_select(call):
     bot.edit_message_text(
         chat_id=chat_id,
         message_id=call.message.message_id,
-        text=f"Okay! Now choose a specific *voice* from {lang_name}. 👇",
+        text=f"Okay! Now choose a specific *voice* from {lang_name}.👇",
         reply_markup=make_tts_voice_keyboard_for_language(lang_name),
         parse_mode="Markdown"
     )
