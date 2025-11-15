@@ -19,7 +19,7 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-TOKEN = "8281896922:AAHgwpFIXFme7NHAIKzt0gQGGQgAst2wjiE"
+TOKEN = "8281896922:AAEocj0Hy7nJ7jrtR5ew6772E22fsu0leCo"
 WEBHOOK_URL = "https://tijaabo-rebo.onrender.com"
 REQUIRED_CHANNEL = "@ejbots"
 
