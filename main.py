@@ -19,9 +19,9 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-TOKEN = "8281896922:AAEzRdF60SvTMyRba0ev4fzVvdY2ip-DStU"
-WEBHOOK_URL = "https://text-to-speech-bot-h2d9.onrender.com"
-REQUIRED_CHANNEL = "@guruubka_wasmada"
+TOKEN = "8281896922:AAHgwpFIXFme7NHAIKzt0gQGGQgAst2wjiE"
+WEBHOOK_URL = "https://tijaabo-rebo.onrender.com"
+REQUIRED_CHANNEL = "@ejbots"
 
 DB_USER = "lakicalinuur"
 DB_PASSWORD = "DjReFoWZGbwjry8K"
