@@ -948,7 +948,7 @@ def on_tts_multilingual_select(call):
     bot.edit_message_text(
         chat_id=chat_id,
         message_id=call.message.message_id,
-        text="Okay! Now choose a specific *voice* from Multilingual.👇",
+        text="Okay! Now choose a specific voice from Multilingual.👇",
         reply_markup=make_tts_multilingual_keyboard()
     )
     bot.answer_callback_query(call.id)
