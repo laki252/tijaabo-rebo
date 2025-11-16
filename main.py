@@ -761,13 +761,13 @@ def send_subscription_message(chat_id: int):
         markup = InlineKeyboardMarkup()
         markup.add(
             InlineKeyboardButton(
-                "Click here to join the Channel",
+                "🔗 join Channel",
                 url=f"https://t.me/{REQUIRED_CHANNEL.lstrip('@')}"
             )
         )
         bot.send_message(
             chat_id,
-            "🔒 Access Locked You cannot use this bot until you join the Channel.",
+            "🚫 First join the channel @ejbots to use this bot",
             reply_markup=markup
         )
     except Exception:
