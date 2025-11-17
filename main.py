@@ -767,7 +767,7 @@ def send_subscription_message(chat_id: int):
         )
         bot.send_message(
             chat_id,
-            "🚫 First join the channel @ejbots to use this bot",
+            "🚫 First join the channel @norshub to use this bot",
             reply_markup=markup
         )
     except Exception:
