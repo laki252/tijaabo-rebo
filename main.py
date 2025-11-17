@@ -21,7 +21,7 @@ logging.basicConfig(
 
 TOKEN = "8281896922:AAEocj0Hy7nJ7jrtR5ew6772E22fsu0leCo"
 WEBHOOK_URL = "https://tijaabo-rebo.onrender.com"
-REQUIRED_CHANNEL = "@norshub"
+REQUIRED_CHANNEL = "@ok_fans"
 
 DB_USER = "lakicalinuur"
 DB_PASSWORD = "DjReFoWZGbwjry8K"
@@ -767,7 +767,7 @@ def send_subscription_message(chat_id: int):
         )
         bot.send_message(
             chat_id,
-            "🚫 First join the channel @norshub to use this bot",
+            "🚫 First join the channel @ok_fans to use this bot",
             reply_markup=markup
         )
     except Exception:
