@@ -21,7 +21,7 @@ logging.basicConfig(
 
 TOKEN = "8281896922:AAEocj0Hy7nJ7jrtR5ew6772E22fsu0leCo"
 WEBHOOK_URL = "https://tijaabo-rebo.onrender.com"
-REQUIRED_CHANNEL = "@ejbots"
+REQUIRED_CHANNEL = "@norshub"
 
 DB_USER = "lakicalinuur"
 DB_PASSWORD = "DjReFoWZGbwjry8K"
