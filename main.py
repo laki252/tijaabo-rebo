@@ -110,7 +110,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 DOWNLOADS_DIR = "./downloads"
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
 
-REQUIRED_CHANNEL = os.environ.get("REQUIRED_CHANNEL", "@laaaaaaaaalaaaaaa")
+REQUIRED_CHANNEL = os.environ.get("REQUIRED_CHANNEL", "@ok_fans")
 LANGS = [
 ("🇬🇧 English","en"), ("🇸🇦 العربية","ar"), ("🇪🇸 Español","es"), ("🇫🇷 Français","fr"),
 ("🇷🇺 Русский","ru"), ("🇩🇪 Deutsch","de"), ("🇮🇳 हिन्दी","hi"), ("🇮🇷 فارسی","fa"),
