@@ -16,7 +16,7 @@ from pydub import AudioSegment, silence
 API_ID = int(os.environ.get("API_ID", "29169428"))
 API_HASH = os.environ.get("API_HASH", "55742b16a85aac494c7944568b5507e5")
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "8303813448:AAEVDY4a5fzP7pT-Yq-yPfdkzU0EsO87Z1c")
-WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "https://midkayga-2-baad-1ggd.onrender.com")
+WEBHOOK_URL = os.environ.get("WEBHOOK_URL", "https://tijaabo-rebo-7869.onrender.com")
 PORT = int(os.environ.get("PORT", 8080))
 
 tele_bot = telebot.TeleBot(BOT_TOKEN)
